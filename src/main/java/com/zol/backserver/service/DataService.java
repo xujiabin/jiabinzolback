@@ -52,7 +52,7 @@ public class DataService {
 				} catch (Exception e) {
 					map.put(t.getId(), url);
 					e.printStackTrace();
-					logger.error("",e);
+					logger.error("保存产品信息错误：",e);
 				}
 				//暂停2秒进行抓取
 				try {

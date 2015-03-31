@@ -49,7 +49,7 @@ public class QueryReferTimeService {
 				}
 			}
 		} catch (Exception e) {
-			logger.error("",e);
+			logger.error("定时任务查询时间错误",e);
 			e.printStackTrace();
 		}
 		
@@ -101,7 +101,7 @@ public class QueryReferTimeService {
 			}
 			logger.info("最后的更新时间结果："+result.toString());
 		} catch (Exception e) {
-			logger.error("",e);
+			logger.error("zolback根据用户查询刷新时间错误",e);
 			e.printStackTrace();
 		}
 		return result;
