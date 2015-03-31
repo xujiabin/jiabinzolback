@@ -1,18 +1,12 @@
 package com.zol.backserver.service;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.zol.backserver.cache.CacheService;
 import com.zol.backserver.dao.CommonDao;
 import com.zol.backserver.dao.bean.OrderUrl;
@@ -113,37 +107,5 @@ public class QueryReferTimeService {
 		return result;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	public static void main(String[] args){
-		Map<String,Integer> map = new HashMap<String, Integer>();
-		map.put("0", 11);
-		map.put("1", 14);
-		map.put("2", 12);
-		map.put("3", 5);
-		map.put("4", 6);
-		
-		List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String,Integer>>(map.entrySet());
-		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
-				return o2.getValue().compareTo(o1.getValue());
-			}
-			
-		});
-		
-		for(Entry<String, Integer> en :map.entrySet()){ 
-			   System.out.println(en.getKey()+":"+en.getValue()); 
-		 } 
-		System.out.println(list.get(0).getKey()+"=="+list.get(0).getValue());
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DAY_OF_MONTH, -1);
-		System.out.println(cal.getTime());
-	}
 
 }
