@@ -107,6 +107,7 @@ public class DataService {
 	 * 保存数据
 	 */
 	private void savedata(int id,String url)throws Exception{
+		Integer.parseInt("fd");
 		Document doc = getURLContentForGet(url);
 		logger.info("url:"+url);
 		String name = doc.select(".page-title").text();
