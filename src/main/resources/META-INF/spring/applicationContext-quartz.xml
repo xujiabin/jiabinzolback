@@ -26,7 +26,7 @@
        </property>
        <!-- 每天8点至22点   每隔30分钟触发一次 -->
        <property name="cronExpression">
-           <value>0 0/2 9-22 * * ?</value>
+           <value>0 0/30 9-22 * * ?</value>
        </property>
     </bean>
     
